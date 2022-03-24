@@ -44,7 +44,7 @@ export default class MessageHandler {
             }
         } catch (err) {
             let errorMessage = 'Failed to do something exceptional'
-            if (err instansceof Error){
+            if (err instanceof Error) {
                 errorMessage = err.message
             }
             console.log(errorMessage)
