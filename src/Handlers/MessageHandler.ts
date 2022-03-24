@@ -43,7 +43,11 @@ export default class MessageHandler {
                 await this.client.setXp(M.sender.jid, command.config.baseXp || 10, 50)
             }
         } catch (err) {
-            return void this.client.log(err.message as string, true)
+            let errorMessage = 'Failed to do something exceptional'
+            if (err instansceof Error){
+                errorMessage = err.message
+            }
+            console.log(errorMessage)
         }
     }
 
