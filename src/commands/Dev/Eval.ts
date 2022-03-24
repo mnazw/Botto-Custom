@@ -21,11 +21,11 @@ export default class Command extends BaseCommand {
             console.log(output)
             out = JSON.stringify(output)
         } catch (err) {
-            let errorMessage = 'Failed to do something exceptional'
+            out = 'Failed to do something exceptional'
             if (err instanceof Error) {
-                errorMessage = err.message
+                out = err.message
             }
         }
-        return void (await M.reply(errorMessage))
+        return void (await M.reply(out))
     }
 }
