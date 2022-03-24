@@ -25,8 +25,7 @@ export default class Command extends BaseCommand {
             if (err instanceof Error) {
                 errorMessage = err.message
             }
-            console.log(errorMessage)
         }
-        return void (await M.reply(out))
+        return void (await M.reply(errorMessage))
     }
 }
